@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="/assets/js/script.js" defer></script>
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link
+      rel="icon"
+      href="assets/images/e726abd62a7d08749d3a882889cdc78d-1.png"
+    />
+    <title>Calculator</title>
+  </head>
+  <body onload="startTime()">
+    <section class="hero">
+      <div class="iphone">
+        <div class="screen">
+          <div class="top-bar">
+            <div id="clock"></div>
+            <script>
+              function startTime() {
+                const today = new Date();
+                let h = today.getHours();
+                let m = today.getMinutes();
+                m = checkTime(m);
+                document.getElementById("clock").innerHTML = h + ":" + m;
+                setTimeout(startTime, 1000);
+              }
+
+              function checkTime(i) {
+                if (i < 10) {
+                  i = "0" + i;
+                } // add zero in front of numbers < 10
+                return i;
+              }
+            </script>
+            <div class="dynamic-island"></div>
+            <div class="right-side">
+              <img class="signal" src="/assets/images/ios-signal.svg" alt="" />
+              <img class="wifi" src="/assets/images/ios-wifi-2.svg" alt="" />
+              <img
+                class="battery"
+                src="/assets/images/ios-battery-full-3.svg"
+                alt=""
+              />
+            </div>
+          </div>
+
+          <div id="calculator">
+            <div id="display">
+              <div class="w"></div>
+            </div>
+            <div class="upper-buttons">
+              <button class="clear">AC</button>
+              <button class="negative">+/-</button>
+              <button class="percent">%</button>
+              <button class="operator">÷</button>
+              <button class="num">7</button>
+              <button class="num">8</button>
+              <button class="num">9</button>
+              <button class="operator">×</button>
+              <button class="num">4</button>
+              <button class="num">5</button>
+              <button class="num">6</button>
+              <button class="operator">−</button>
+              <button class="num">1</button>
+              <button class="num">2</button>
+              <button class="num">3</button>
+              <button class="operator">+</button>
+            </div>
+            <div class="bottom-buttons">
+              <div class="test">
+                <button class="zero num">0</button>
+              </div>
+              <button class="decimal">.</button>
+              <button class="equals">=</button>
+            </div>
+          </div>
+          <div class="swipe"></div>
+        </div>
+      </div>
+
+      <div style="font-size: 1.2rem">
+        <i class="fa fa-apple"></i> Zayn Jaber | 2024
+      </div>
+    </section>
+  </body>
+</html>
