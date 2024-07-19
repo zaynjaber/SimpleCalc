@@ -154,7 +154,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   function clearPressed() {
     console.log("Clear pressed");
-    display.textContent = "0";
+    display.textContent = "";
     storedValue = null;
     lastOperatorEntered = null;
     display.style.fontSize = initialFontSize + "px"; // Reset font size to initial size
